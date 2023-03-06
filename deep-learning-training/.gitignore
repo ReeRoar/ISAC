@@ -1,5 +1,6 @@
 /checkpoints
-/configs
-/Swin-Transformer-Object-Detection
 /mmdetection
 /apex
+config/checkpoints
+/JSON2YOLO
+/runs

@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
     <mapping directory="$PROJECT_DIR$/DINO" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/JSON2YOLO" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Swin-Transformer-Object-Detection" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/apex" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/mmdetection" vcs="Git" />
