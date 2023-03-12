@@ -4,7 +4,6 @@ from marshmallow import (
     ValidationError,
 )
 
-
 class GenericRequest:
     def __init__(self, model, schema, db, has_reqparse=False):
         """
