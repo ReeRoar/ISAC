@@ -64,8 +64,10 @@ class GenericRequest:
         :return: Success status of request
         """
         json_input = request.json
+        print(json_input)
         try:
             data = self.schema.load(json_input)
+            print(type(data))
             self.db.session.add(data)
             self.db.session.commit()
             return jsonify(success=True)
