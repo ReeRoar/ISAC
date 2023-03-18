@@ -4,11 +4,11 @@ from flask import Flask, request, jsonify, abort
 from markupsafe import escape
 from flask_sqlalchemy import SQLAlchemy
 import json
-from ManyToOneRequest import ManyToOneRequest
+from generic_requests.ManyToOneRequest import ManyToOneRequest
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, registry
-from ManyToManyRequest import ManyToManyRequest
-from GenericRequest import GenericRequest
+from generic_requests.ManyToManyRequest import ManyToManyRequest
+from generic_requests.GenericRequest import GenericRequest
 from flask_marshmallow import Marshmallow
 from flask_restful import reqparse
 from marshmallow import (
