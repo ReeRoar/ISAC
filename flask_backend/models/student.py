@@ -13,6 +13,8 @@ class Student(db.Model):
     last_name: Mapped[str] = db.Column(db.String(32), nullable=False)
     email: Mapped[str] = db.Column(db.String(32))
     sign_in = db.relationship('SignIn', backref='student', lazy=True)
+    student_enrollment = db.relationship('StudentEnrollment', backref='student', lazy=True)
+    attendance = db.relationship('attendance', backref='student', lazy=True)
 
 
 class StudentSchema(ma.SQLAlchemySchema):

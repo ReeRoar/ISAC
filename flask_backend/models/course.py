@@ -12,7 +12,9 @@ class Course(db.Model):
     id: Mapped[int] = db.Column(db.Integer, primary_key=True)
     start_time: Mapped[DateTime] = db.Column(db.DateTime, server_default=None)
     end_time: Mapped[DateTime] = db.Column(db.DateTime, server_default=None)
-    many_to_many = db.relationship('ProfessorAssignment', backref='course', lazy=True)
+    prof_assign = db.relationship('ProfessorAssignment', backref='course', lazy=True)
+    stud_enroll = db.relationship('StudentEnrollment', backref='course', lazy=True)
+    attendance = db.relationship('Attendance', backref='course', lazy=True)
 
 
 class CourseSchema(ma.SQLAlchemySchema):
