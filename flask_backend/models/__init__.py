@@ -1,2 +1,1 @@
-from models import student
-from models import  sign_in
+from models import student, sign_in, professor

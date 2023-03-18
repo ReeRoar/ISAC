@@ -32,5 +32,10 @@ def sign_in_request_by_id(id):
 
 @app.route('/student_sign_ins/<id>', methods=['GET'])
 def get_all_sign_ins_by_student(id):
+    """
+    Gets all sign ins by a student
+    :param id: student id
+    :return: list of jsons, where each json contains a student and their coresponding sign in
+    """
     return requester.get_all_joined_by_one_model_id(id)
 
