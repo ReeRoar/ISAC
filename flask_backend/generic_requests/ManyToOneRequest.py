@@ -3,8 +3,8 @@ from markupsafe import escape
 from generic_requests.GenericRequest import  GenericRequest
 
 class ManyToOneRequest(GenericRequest):
-    def __init__(self, many_model, schema, db, one_model, joined_schema, has_reqparse=False):
-        super().__init__(many_model, schema, db, has_reqparse)
+    def __init__(self, many_model, schema, one_model, joined_schema, has_reqparse=True):
+        super().__init__(many_model, schema, has_reqparse)
 
         self.one_model = one_model
         self.joined_schema = joined_schema

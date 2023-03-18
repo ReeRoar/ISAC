@@ -3,9 +3,10 @@ from markupsafe import escape
 from marshmallow import (
     ValidationError,
 )
+from app import db
 
 class GenericRequest:
-    def __init__(self, model, schema, db, has_reqparse=False):
+    def __init__(self, model, schema, has_reqparse=True):
         """
         Class in order to make model agnostic requests. This class only contains basic requests and should be extended
         in order to create requests having joined tables.

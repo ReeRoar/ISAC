@@ -6,7 +6,7 @@ from models import sign_in, student
 from util.basic_request_functions import get_all_post, put_delete_get_by_id
 from generic_requests.ManyToOneRequest import ManyToOneRequest
 
-requester = ManyToOneRequest(sign_in.SignIn, sign_in.SignInSchema(), db, student.Student, sign_in.StudentSignInSchema(), has_reqparse=True)
+requester = ManyToOneRequest(sign_in.SignIn, sign_in.SignInSchema(), student.Student, sign_in.StudentSignInSchema(), has_reqparse=True)
 
 
 @app.route('/sign_ins', methods=['GET', 'POST'])

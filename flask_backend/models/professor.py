@@ -12,6 +12,7 @@ class Professor(db.Model):
     first_name: Mapped[str] = db.Column(db.String(32), nullable=False)
     last_name: Mapped[str] = db.Column(db.String(32), nullable=False)
     email: Mapped[str] = db.Column(db.String(32))
+    many_to_many = db.relationship('ProfessorAssignment', backref='professor', lazy=True)
 
 
 class ProfessorSchema(ma.SQLAlchemySchema):
