@@ -1,6 +1,6 @@
 from flask import jsonify
 from markupsafe import escape
-from generic_requests.GenericRequest import  GenericRequest
+from generic_requests.GenericRequest import GenericRequest
 
 class ManyToOneRequest(GenericRequest):
     def __init__(self, many_model, schema, one_model, joined_schema, has_reqparse=True):

@@ -23,7 +23,7 @@ class CourseSchema(ma.SQLAlchemySchema):
 
     id = fields.Integer()
     start_time = fields.DateTime()
-    end_time = fields.Integer()
+    end_time = fields.DateTime()
 
     @post_load
     def make_model(self, data, **kwargs):
