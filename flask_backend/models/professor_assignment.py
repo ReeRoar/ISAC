@@ -16,8 +16,8 @@ class ProfessorAssignment(db.Model):
     model2_id = course id
     """
     id: Mapped[int] = db.Column(db.Integer, primary_key=True)
-    model2_id = db.Column(db.Integer, db.ForeignKey("course.course_id"), nullable=False)
-    model_id = db.Column(db.Integer, db.ForeignKey("professor.id"), nullable=False)
+    course_number = db.Column(db.Integer, db.ForeignKey("course.course_number"), nullable=False)
+    professor_id = db.Column(db.Integer, db.ForeignKey("professor.professor_id"), nullable=False)
 
 
 
@@ -26,8 +26,8 @@ class ProfessorAssignmentSchema(ma.SQLAlchemySchema):
         model = ProfessorAssignment
 
     id = fields.Integer()
-    model2_id = fields.Integer()
-    model_id = fields.Integer()
+    course_number = fields.Integer()
+    professor_id = fields.Integer()
 
     @post_load
     def make_model(self, data, **kwargs):

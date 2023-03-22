@@ -5,8 +5,9 @@ from flask import request, Response
 from models import student
 from util.basic_request_functions import get_all_post, put_delete_get_by_id
 
+requester = GenericRequest(student.Student, student.StudentSchema(), 'student_id', True)
 
-requester = GenericRequest(student.Student, student.StudentSchema(), True)
+
 @app.route('/students', methods=['GET', 'POST'])
 def student_request():
     """
@@ -18,7 +19,7 @@ def student_request():
     return get_all_post(requester, request)
 
 
-@app.route('/students/<id>', methods=['GET', 'DELETE', 'PUT',])
+@app.route('/students/<id>', methods=['GET', 'DELETE', 'PUT', ])
 def student_request_by_id(id):
     """
     Preforms put, delete, or get request by student id

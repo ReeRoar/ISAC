@@ -6,7 +6,7 @@ from models import professor
 from util.basic_request_functions import get_all_post, put_delete_get_by_id
 
 
-requester = GenericRequest(professor.Professor, professor.ProfessorSchema(), True)
+requester = GenericRequest(professor.Professor, professor.ProfessorSchema(), 'professor_id', True)
 
 
 @app.route('/professors', methods=['GET', 'POST'])

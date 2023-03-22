@@ -10,7 +10,9 @@ requester = ManyToManyRequest(professor_assignment.ProfessorAssignment,
                               professor_assignment.ProfessorAssignmentSchema(),
                               professor_assignment.ProfessorAssignmentJoinedSchema(),
                               professor.Professor,
-                              course.Course)
+                              course.Course,
+                              "professor_id",
+                              "course_number")
 
 
 @app.route('/prof_assignment', methods=['GET', 'POST'])

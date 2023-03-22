@@ -10,7 +10,9 @@ requester = ManyToManyRequest(student_enrollment.StudentEnrollment,
                               student_enrollment.StudentEnrollmentSchema(),
                               student_enrollment.StudentEnrollmentJoinedSchema(),
                               student.Student,
-                              course.Course)
+                              course.Course,
+                              'student_id',
+                              'course_number')
 
 
 @app.route('/student_enroll', methods=['GET', 'POST'])

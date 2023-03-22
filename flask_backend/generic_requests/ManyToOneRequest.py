@@ -2,10 +2,11 @@ from flask import jsonify
 from markupsafe import escape
 from generic_requests.GenericRequest import GenericRequest
 
-class ManyToOneRequest(GenericRequest):
-    def __init__(self, many_model, schema, one_model, joined_schema, has_reqparse=True):
-        super().__init__(many_model, schema, has_reqparse)
 
+class ManyToOneRequest(GenericRequest):
+    def __init__(self, model, schema, one_model, joined_schema, one_model_id='id', id='id', has_reqparse=True):
+        super().__init__(model, schema, id, has_reqparse)
+        self.one_model_id = one_model_id
         self.one_model = one_model
         self.joined_schema = joined_schema
 
@@ -16,11 +17,12 @@ class ManyToOneRequest(GenericRequest):
          containing the name of the object then each attribute
         """
         query_result = self.db.session.query(self.model, self.one_model).filter(
-            self.one_model.id == self.model.model_id).all()
+            getattr(self.one_model,self.one_model_id) == getattr(self.model, self.id)).all()
         return jsonify([self.joined_schema.dump(obj) for obj in query_result])
 
     def get_all_joined_by_one_model_id(self, id):
         one_model_id = escape(id)
         query_result = self.db.session.query(self.model, self.one_model).filter(
-            self.one_model.id == self.model.model_id).filter(self.one_model.id == one_model_id).all()
+            getattr(self.one_model, self.one_model_id) == getattr(self.model, self.id),
+            getattr(self.one_model, self.one_model_id) == one_model_id).all()
         return jsonify([self.joined_schema.dump(obj) for obj in query_result])

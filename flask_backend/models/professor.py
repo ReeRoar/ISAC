@@ -8,7 +8,7 @@ from app import db, ma
 
 
 class Professor(db.Model):
-    id: Mapped[int] = db.Column(db.Integer, primary_key=True)
+    professor_id: Mapped[int] = db.Column(db.Integer, primary_key=True)
     first_name: Mapped[str] = db.Column(db.String(32), nullable=False)
     last_name: Mapped[str] = db.Column(db.String(32), nullable=False)
     email: Mapped[str] = db.Column(db.String(32))
@@ -19,7 +19,7 @@ class ProfessorSchema(ma.SQLAlchemySchema):
     class Meta:
         model = Professor
 
-    id = fields.Integer()
+    professor_id = fields.Integer()
     first_name = fields.String()
     last_name = fields.String()
     email = fields.String()

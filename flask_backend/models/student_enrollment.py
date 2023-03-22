@@ -11,13 +11,9 @@ from models.student import Student, StudentSchema
 
 
 class StudentEnrollment(db.Model):
-    """
-    model_id = student id
-    model2_id = course id
-    """
     id: Mapped[int] = db.Column(db.Integer, primary_key=True)
-    model2_id = db.Column(db.Integer, db.ForeignKey("course.course_id"), nullable=False)
-    model_id = db.Column(db.Integer, db.ForeignKey("student.id"), nullable=False)
+    course_number = db.Column(db.Integer, db.ForeignKey("course.course_number"), nullable=False)
+    student_id = db.Column(db.Integer, db.ForeignKey("student.student_id"), nullable=False)
 
 
 
@@ -26,8 +22,8 @@ class StudentEnrollmentSchema(ma.SQLAlchemySchema):
         model = StudentEnrollment
 
     id = fields.Integer()
-    model2_id = fields.Integer()
-    model_id = fields.Integer()
+    course_number = fields.Integer()
+    student_id = fields.Integer()
 
     @post_load
     def make_model(self, data, **kwargs):
