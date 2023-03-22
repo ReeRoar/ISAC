@@ -6,7 +6,7 @@ from marshmallow import (
 from app import db
 
 class GenericRequest:
-    def __init__(self, model, schema, has_reqparse=True):
+    def __init__(self, model, schema, has_reqparse=True, id='id'):
         """
         Class in order to make model agnostic requests. This class only contains basic requests and should be extended
         in order to create requests having joined tables.
@@ -21,7 +21,7 @@ class GenericRequest:
         if has_reqparse:
             self.parser = schema.get_parser()
         self.db = db
-
+        self.id = id
     def get_all(self):
         """
         Gets all rows of model
@@ -80,7 +80,7 @@ class GenericRequest:
         :return: Success status of request
         """
         model_id = escape(id)
-        x = self.model.query.filter_by(id=model_id).delete()
+        x = self.model.query.filter(getattr(self.model,self.id) == model_id).delete()
         if x == 0:
             abort(404)
         self.db.session.commit()

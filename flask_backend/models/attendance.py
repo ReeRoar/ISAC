@@ -19,7 +19,7 @@ class Attendance(db.Model):
     id: Mapped[int] = db.Column(db.Integer, primary_key=True)
     date: Mapped[Date] = db.Column(db.Date)
     status: Mapped[str] = db.Column(db.String(1), server_default='Y')
-    model_id = db.Column(db.Integer, db.ForeignKey("course.id"), nullable=False)
+    model_id = db.Column(db.Integer, db.ForeignKey("course.course_id"), nullable=False)
     model2_id = db.Column(db.Integer, db.ForeignKey("student.id"), nullable=False)
 
 

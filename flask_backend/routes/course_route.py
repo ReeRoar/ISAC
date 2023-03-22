@@ -6,7 +6,7 @@ from models import course
 from util.basic_request_functions import get_all_post, put_delete_get_by_id
 
 
-requester = GenericRequest(course.Course, course.CourseSchema(), True)
+requester = GenericRequest(course.Course, course.CourseSchema(), True,id='course_id')
 @app.route('/courses', methods=['GET', 'POST'])
 def courses_request():
     """

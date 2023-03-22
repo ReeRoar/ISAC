@@ -16,7 +16,7 @@ class StudentEnrollment(db.Model):
     model2_id = course id
     """
     id: Mapped[int] = db.Column(db.Integer, primary_key=True)
-    model2_id = db.Column(db.Integer, db.ForeignKey("course.id"), nullable=False)
+    model2_id = db.Column(db.Integer, db.ForeignKey("course.course_id"), nullable=False)
     model_id = db.Column(db.Integer, db.ForeignKey("student.id"), nullable=False)
 
 
