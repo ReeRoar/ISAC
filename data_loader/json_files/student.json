@@ -1,0 +1,24 @@
+{
+  "students": [
+    {
+      "first_name": "Zach",
+      "last_name": "Biernat",
+      "email": "zachsemail@hartford.edu"
+    },
+    {
+      "first_name": "Stew",
+      "last_name": "Dent",
+      "email": "Dent@hartford.edu"
+    },
+    {
+      "first_name": "Alana",
+      "last_name": "Cedeno",
+      "email": "alanasemail@hartford.edu"
+    },
+    {
+      "first_name": "Reema",
+      "last_name": "Alotaibi",
+      "email": "reemasemail@hartford.edu"
+    }
+  ]
+}

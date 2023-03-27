@@ -17,12 +17,12 @@ class ManyToOneRequest(GenericRequest):
          containing the name of the object then each attribute
         """
         query_result = self.db.session.query(self.model, self.one_model).filter(
-            getattr(self.one_model,self.one_model_id) == getattr(self.model, self.id)).all()
+            getattr(self.one_model,self.one_model_id) == getattr(self.model, self.one_model_id)).all()
         return jsonify([self.joined_schema.dump(obj) for obj in query_result])
 
     def get_all_joined_by_one_model_id(self, id):
         one_model_id = escape(id)
         query_result = self.db.session.query(self.model, self.one_model).filter(
-            getattr(self.one_model, self.one_model_id) == getattr(self.model, self.id),
+            getattr(self.one_model, self.one_model_id) == getattr(self.model, self.one_model_id),
             getattr(self.one_model, self.one_model_id) == one_model_id).all()
         return jsonify([self.joined_schema.dump(obj) for obj in query_result])

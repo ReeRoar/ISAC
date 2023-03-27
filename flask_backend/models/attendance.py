@@ -1,4 +1,4 @@
-from flask_restful import reqparse
+from flask_restful import reqparse, inputs
 from marshmallow import (
     fields,
     post_load,
@@ -30,8 +30,8 @@ class AttendanceSchema(ma.SQLAlchemySchema):
     id = fields.Integer()
     date = fields.Date()
     status = fields.String()
-    model_id = fields.Integer()
-    model2_id = fields.Integer()
+    course_number = fields.Integer()
+    student_id = fields.Integer()
     @post_load
     def make_model(self, data, **kwargs):
         return Attendance(**data)
@@ -39,9 +39,9 @@ class AttendanceSchema(ma.SQLAlchemySchema):
     def get_parser(self):
         parser = reqparse.RequestParser()
         parser.add_argument('id', type=int, location='json')
-        parser.add_argument('date', type=Date, location='json')
-        parser.add_argument('model_id', type=int, location='json')
-        parser.add_argument('model2_id', type=int, location='json')
+        parser.add_argument('date', type=inputs.date, location='json')
+        parser.add_argument('course_number', type=int, location='json')
+        parser.add_argument('student_id', type=int, location='json')
         parser.add_argument('status', type=str, location='json')
         return parser
 

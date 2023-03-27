@@ -1,0 +1,24 @@
+{
+  "professor_assignments": [
+    {
+      "course_number": 1,
+      "professor_id": 1
+    },
+    {
+      "course_number": 1,
+      "professor_id": 2
+    },
+    {
+      "course_number": 2,
+      "professor_id": 2
+    },
+    {
+      "course_number": 3,
+      "professor_id": 2
+    },
+    {
+      "course_number": 3,
+      "professor_id": 3
+    }
+  ]
+}

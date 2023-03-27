@@ -1,0 +1,20 @@
+{
+  "student_enrollments": [
+    {
+      "course_number": 3,
+      "student_id": 1
+    },
+    {
+      "course_number": 1,
+      "student_id": 2
+    },
+    {
+      "course_number": 1,
+      "student_id": 3
+    },
+    {
+      "course_number": 2,
+      "student_id": 2
+    }
+  ]
+}

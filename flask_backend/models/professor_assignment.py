@@ -36,8 +36,8 @@ class ProfessorAssignmentSchema(ma.SQLAlchemySchema):
     def get_parser(self):
         parser = reqparse.RequestParser()
         parser.add_argument('id', type=int, location='json')
-        parser.add_argument('model2_id', type=DateTime, location='json')
-        parser.add_argument('model_id', type=int, location='json')
+        parser.add_argument('course_number', type=DateTime, location='json')
+        parser.add_argument('professor_id', type=int, location='json')
         return parser
 
 

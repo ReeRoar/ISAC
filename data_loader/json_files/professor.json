@@ -1,0 +1,19 @@
+{
+  "professors": [
+    {
+      "first_name": "Andrew",
+      "last_name": "Jung",
+      "email": "jungsemail@hartford.edu"
+    },
+    {
+      "first_name": "Tenured",
+      "last_name": "Prof",
+      "email": "prof@hartford.edu"
+    },
+    {
+      "first_name": "Imoutofnames",
+      "last_name": "plzhelp",
+      "email": "helpme@hartford.edu"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-from flask_restful import reqparse
+from flask_restful import reqparse, inputs
 from marshmallow import (
     fields,
     post_load,
@@ -30,7 +30,7 @@ class SignInSchema(ma.SQLAlchemySchema):
     def get_parser(self):
         parser = reqparse.RequestParser()
         parser.add_argument('id', type=int, location='json')
-        parser.add_argument('time', type=DateTime, location='json')
+        parser.add_argument('time', type=inputs.datetime_from_iso8601, location='json')
         parser.add_argument('model_id', type=int, location='json')
         return parser
 
