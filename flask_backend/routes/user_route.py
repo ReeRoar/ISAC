@@ -1,4 +1,4 @@
-from flask_login import login_user, login_required, logout_user
+from flask_login import login_user, login_required, logout_user, current_user
 
 from app import app, db, login_manager
 import models
@@ -20,9 +20,9 @@ requester = ManyToOneRequest(user.User,
 @app.route('/users', methods=['GET', 'POST'])
 def user_request():
     """
-    Processes SignIn request for get or post
-    GET will return a list of the information of all SignIn
-    POST requires a JSON object containing the studentID under the name of model_id
+    Processes user request for get or post
+    GET will return a list of the information of all user
+    POST requires a JSON object containing the user info
     :return:
     """
     return get_all_post(requester, request)
@@ -31,17 +31,18 @@ def user_request():
 @app.route('/users/<id>', methods=['GET', 'DELETE', 'PUT',])
 def user_request_by_id(id):
     """
-    Preforms put, delete, or get request by student id
-    :param id: ID of sign_in
-    :return: sign_in data if get, else status code
+    Preforms put, delete, or get request by user email
+    :param id: email of user
+    :return: email data if get, else status code
     """
     return put_delete_get_by_id(requester, request, id)
 
 
 @app.route('/user_by_prof/<id>', methods=['GET'])
+@login_required
 def get_all_user_by_prof(id):
     """
-    Gets all sign ins by a student
+    Gets all email by a prof
     :param id: student id
     :return: list of jsons, where each json contains a student and their coresponding sign in
     """
@@ -50,6 +51,10 @@ def get_all_user_by_prof(id):
 
 @app.route('/login', methods=['POST'])
 def log_in():
+    """
+    Logs into account. Requires email and password
+    :return:
+    """
     email = request.json['email']
     password = request.json['password']
     user = get_user_by_email(email)
@@ -77,3 +82,13 @@ def get_user_by_email(email):
     #query_result = db.session.query(User).filter(User.email == email).all()
     query_result = User.query.get_or_404(email)
     return query_result
+
+
+@app.route('/current_user',methods=['GET'])
+@login_required
+def get_current_user():
+    """
+    Gets the current logged in user
+    :return: current user
+    """
+    return jsonify(UserSchema().dump(current_user))
