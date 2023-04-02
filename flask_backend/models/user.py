@@ -16,7 +16,9 @@ class User(UserMixin, db.Model):
     email = db.Column(db.String(32), nullable=False, primary_key=True)
     password = db.Column(db.String(255), nullable=False)
     professor_id = db.Column(db.Integer, db.ForeignKey("professor.professor_id"), nullable=True)
-    id = email
+    #id = email
+    def get_id(self):
+        return self.email
 
 
 class UserSchema(ma.SQLAlchemySchema):

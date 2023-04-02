@@ -1,6 +1,6 @@
 from flask_login import login_required
 
-from app import app, db
+from app import app, db, login_manager
 import models
 from generic_requests.GenericRequest import GenericRequest
 from flask import request, Response
@@ -17,8 +17,8 @@ requester = ManyToManyRequest(attendance.Attendance,
                               "course_number")
 
 
-@login_required
 @app.route('/attendance', methods=['GET', 'POST'])
+@login_required
 def attendance_request():
     """
     Processes SignIn request for get or post
@@ -29,8 +29,8 @@ def attendance_request():
     return get_all_post(requester, request)
 
 
-@login_required
 @app.route('/attendance/<id>', methods=['GET', 'DELETE', 'PUT', ])
+@login_required
 def attendance_request_by_id(id):
     """
     Preforms put, delete, or get request by object id
@@ -40,8 +40,8 @@ def attendance_request_by_id(id):
     return put_delete_get_by_id(requester, request, id)
 
 
-@login_required
 @app.route('/attendance_student/<id>', methods=['GET'])
+@login_required
 def attendance_by_student_id(id):
     """
     Gets objects by student id
@@ -50,8 +50,8 @@ def attendance_by_student_id(id):
     """
     return requester.get_all_joined_by_model_id(id)
 
-@login_required
 @app.route('/attendance_course/<id>', methods=['GET'])
+@login_required
 def attendance_by_course_id(id):
     """
     Gets objects by course id

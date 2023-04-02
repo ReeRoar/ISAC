@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "professor_id": 1,
+      "password": "a",
+      "email": "jungsemail@hartford.edu"
+    },
+    {
+      "professor_id": 2,
+      "password": "ab",
+      "email": "prof@hartford.edu"
+    },
+    {
+      "professor_id": 3,
+      "password": "ab",
+      "email": "helpme@hartford.edu"
+    }
+  ]
+}

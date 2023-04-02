@@ -17,8 +17,8 @@ requester = ManyToManyRequest(professor_assignment.ProfessorAssignment,
                               "course_number")
 
 
-@login_required
 @app.route('/prof_assignment', methods=['GET', 'POST'])
+@login_required
 def prof_assignment_request():
     """
     Processes SignIn request for get or post
@@ -29,8 +29,8 @@ def prof_assignment_request():
     return get_all_post(requester, request)
 
 
-@login_required
 @app.route('/prof_assignment/<id>', methods=['GET', 'DELETE', 'PUT', ])
+@login_required
 def prof_assignment_request_by_id(id):
     """
     Preforms put, delete, or get request by object id
@@ -40,8 +40,8 @@ def prof_assignment_request_by_id(id):
     return put_delete_get_by_id(requester, request, id)
 
 
-@login_required
 @app.route('/prof_assignment_id/<id>', methods=['GET'])
+@login_required
 def prof_assignment_by_prof_id(id):
     """
     Gets all sign ins by a student

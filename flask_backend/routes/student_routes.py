@@ -1,6 +1,6 @@
 from flask_login import login_required
 
-from app import app, db
+from app import app, db, login_manager
 import models
 from generic_requests.GenericRequest import GenericRequest
 from flask import request, Response

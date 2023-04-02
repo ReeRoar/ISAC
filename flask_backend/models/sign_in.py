@@ -5,7 +5,7 @@ from marshmallow import (
 )
 from sqlalchemy.orm import Mapped
 from sqlalchemy import DateTime
-from app import db, ma
+from app import db, ma, login_manager
 from models import student
 
 

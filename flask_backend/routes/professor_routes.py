@@ -11,8 +11,8 @@ from util.basic_request_functions import get_all_post, put_delete_get_by_id
 requester = GenericRequest(professor.Professor, professor.ProfessorSchema(), 'professor_id', True)
 
 
-@login_required
 @app.route('/professors', methods=['GET', 'POST'])
+@login_required
 def professor_request():
     """
     Processes professor request for get or post
@@ -23,8 +23,8 @@ def professor_request():
     return get_all_post(requester, request)
 
 
-@login_required
 @app.route('/professors/<id>', methods=['GET', 'DELETE', 'PUT',])
+@login_required
 def professor_request_by_id(id):
     """
     Preforms put, delete, or get request by professor id

@@ -16,8 +16,8 @@ requester = ManyToOneRequest(sign_in.SignIn,
                              has_reqparse=True)
 
 
-@login_required
 @app.route('/sign_ins', methods=['GET', 'POST'])
+@login_required
 def sign_in_request():
     """
     Processes SignIn request for get or post
@@ -28,8 +28,8 @@ def sign_in_request():
     return get_all_post(requester, request)
 
 
-@login_required
 @app.route('/sign_ins/<id>', methods=['GET', 'DELETE', 'PUT',])
+@login_required
 def sign_in_request_by_id(id):
     """
     Preforms put, delete, or get request by student id
@@ -39,8 +39,8 @@ def sign_in_request_by_id(id):
     return put_delete_get_by_id(requester, request, id)
 
 
-@login_required
 @app.route('/student_sign_ins/<id>', methods=['GET'])
+@login_required
 def get_all_sign_ins_by_student(id):
     """
     Gets all sign ins by a student
