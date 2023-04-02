@@ -32,8 +32,8 @@ class StudentEnrollmentSchema(ma.SQLAlchemySchema):
     def get_parser(self):
         parser = reqparse.RequestParser()
         parser.add_argument('id', type=int, location='json')
-        parser.add_argument('model2_id', type=inputs.datetime_from_iso8601, location='json')
-        parser.add_argument('model_id', type=int, location='json')
+        parser.add_argument('course_number', type=int, location='json')
+        parser.add_argument('student_id', type=int, location='json')
         return parser
 
 

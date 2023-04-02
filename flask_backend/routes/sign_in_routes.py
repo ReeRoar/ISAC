@@ -1,3 +1,5 @@
+from flask_login import login_required
+
 from app import app, db
 import models
 from generic_requests.GenericRequest import GenericRequest
@@ -14,6 +16,7 @@ requester = ManyToOneRequest(sign_in.SignIn,
                              has_reqparse=True)
 
 
+@login_required
 @app.route('/sign_ins', methods=['GET', 'POST'])
 def sign_in_request():
     """
@@ -25,6 +28,7 @@ def sign_in_request():
     return get_all_post(requester, request)
 
 
+@login_required
 @app.route('/sign_ins/<id>', methods=['GET', 'DELETE', 'PUT',])
 def sign_in_request_by_id(id):
     """
@@ -35,6 +39,7 @@ def sign_in_request_by_id(id):
     return put_delete_get_by_id(requester, request, id)
 
 
+@login_required
 @app.route('/student_sign_ins/<id>', methods=['GET'])
 def get_all_sign_ins_by_student(id):
     """

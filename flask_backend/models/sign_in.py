@@ -31,7 +31,7 @@ class SignInSchema(ma.SQLAlchemySchema):
         parser = reqparse.RequestParser()
         parser.add_argument('id', type=int, location='json')
         parser.add_argument('time', type=inputs.datetime_from_iso8601, location='json')
-        parser.add_argument('model_id', type=int, location='json')
+        parser.add_argument('student_id', type=int, location='json')
         return parser
 
 

@@ -6,7 +6,7 @@ from marshmallow import (
 from app import db
 
 class GenericRequest:
-    def __init__(self, model, schema,id='id', has_reqparse=True):
+    def __init__(self, model, schema, id='id', has_reqparse=True):
         """
         Class in order to make model agnostic requests. This class only contains basic requests and should be extended
         in order to create requests having joined tables.

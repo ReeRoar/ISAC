@@ -1,3 +1,5 @@
+from flask_login import login_required
+
 from app import app, db
 import models
 from generic_requests.GenericRequest import GenericRequest
@@ -9,6 +11,7 @@ from util.basic_request_functions import get_all_post, put_delete_get_by_id
 requester = GenericRequest(professor.Professor, professor.ProfessorSchema(), 'professor_id', True)
 
 
+@login_required
 @app.route('/professors', methods=['GET', 'POST'])
 def professor_request():
     """
@@ -20,6 +23,7 @@ def professor_request():
     return get_all_post(requester, request)
 
 
+@login_required
 @app.route('/professors/<id>', methods=['GET', 'DELETE', 'PUT',])
 def professor_request_by_id(id):
     """

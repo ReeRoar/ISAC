@@ -1,3 +1,5 @@
+from flask_login import login_required
+
 from app import app, db
 import models
 from generic_requests.GenericRequest import GenericRequest
@@ -7,6 +9,9 @@ from util.basic_request_functions import get_all_post, put_delete_get_by_id
 
 
 requester = GenericRequest(course.Course, course.CourseSchema(), 'course_number', True)
+
+
+@login_required
 @app.route('/courses', methods=['GET', 'POST'])
 def courses_request():
     """
@@ -18,6 +23,7 @@ def courses_request():
     return get_all_post(requester, request)
 
 
+@login_required
 @app.route('/courses/<id>', methods=['GET', 'DELETE', 'PUT',])
 def courses_request_by_id(id):
     """
