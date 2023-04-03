@@ -1,3 +1,5 @@
+from flask_login import login_required
+
 from app import app, db
 import models
 from generic_requests.GenericRequest import GenericRequest
@@ -10,6 +12,7 @@ requester = GenericRequest(professor.Professor, professor.ProfessorSchema(), 'pr
 
 
 @app.route('/professors', methods=['GET', 'POST'])
+@login_required
 def professor_request():
     """
     Processes professor request for get or post
@@ -21,6 +24,7 @@ def professor_request():
 
 
 @app.route('/professors/<id>', methods=['GET', 'DELETE', 'PUT',])
+@login_required
 def professor_request_by_id(id):
     """
     Preforms put, delete, or get request by professor id

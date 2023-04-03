@@ -4,7 +4,7 @@ import json
 IP = '127.0.0.1'
 PORT = '5000'
 base_url = f'http://{IP}:{PORT}'
-
+session = requests.Session()
 
 def post_data(file_name, object_name, url):
     '''
@@ -18,11 +18,15 @@ def post_data(file_name, object_name, url):
     data = json.load(f)
     for i in data[object_name]:
         try:
-            r = requests.post(f'{base_url}/{url}', json=i)
+            r = session.post(f'{base_url}/{url}', json=i)
             r.raise_for_status()
         except Exception as e:
             print(f'Error has occurred with load file {file_name}:\n{e}')
 
+
+post_data('users.json', 'users', 'users')
+r = session.post(f'{base_url}/login', json={'email':'jungsemail@hartford.edu',
+                                         'password' : 'a'})
 
 post_data('course.json', 'courses', 'courses')
 post_data('professor.json', 'professors', 'professors')
