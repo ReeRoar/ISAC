@@ -17,7 +17,6 @@ requester = ManyToOneRequest(sign_in.SignIn,
 
 
 @app.route('/sign_ins', methods=['GET', 'POST'])
-@login_required
 def sign_in_request():
     """
     Processes SignIn request for get or post

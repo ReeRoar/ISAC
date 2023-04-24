@@ -24,12 +24,17 @@ def post_data(file_name, object_name, url):
             print(f'Error has occurred with load file {file_name}:\n{e}')
 
 
-post_data('users.json', 'users', 'users')
+session.post(f'{base_url}/users',json={'email':'jungsemail@hartford.edu',
+                                       'password' : 'a'})
 r = session.post(f'{base_url}/login', json={'email':'jungsemail@hartford.edu',
-                                         'password' : 'a'})
+                                            'password' : 'a'})
+
+post_data('professor.json', 'professors', 'professors')
+
+post_data('users.json', 'users', 'users')
+
 
 post_data('course.json', 'courses', 'courses')
-post_data('professor.json', 'professors', 'professors')
 post_data('student.json', 'students', 'students')
 post_data('sign_in.json', 'sign_ins', 'sign_ins')
 post_data('professor_assignment.json', 'professor_assignments', 'prof_assignment')
