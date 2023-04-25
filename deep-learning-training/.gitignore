@@ -5,3 +5,4 @@ config/checkpoints
 /JSON2YOLO
 /runs
 *.pt
+/data

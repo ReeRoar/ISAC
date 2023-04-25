@@ -2,45 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11841267-fb08-41bd-a3fa-a397828cf805" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/pretrained_yolov8.py" beforeDir="false" afterPath="$PROJECT_DIR$/../deep-learning-training/train/pretrained_yolov8.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train/args.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train/events.out.tfevents.1678119618.zach-X570-I-AORUS-PRO-WIFI.170924.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train/labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train/labels_correlogram.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train/results.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train/train_batch0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train/train_batch1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train/train_batch2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train2/F1_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train2/PR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train2/P_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train2/R_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train2/args.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train2/confusion_matrix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train2/events.out.tfevents.1678122025.zach-X570-I-AORUS-PRO-WIFI.179682.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train2/labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train2/labels_correlogram.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train2/results.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train2/results.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train2/train_batch0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train2/train_batch1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train2/train_batch2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train2/val_batch0_labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train2/val_batch0_pred.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train2/val_batch1_labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train2/val_batch1_pred.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train2/val_batch2_labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train2/val_batch2_pred.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train3/args.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train3/events.out.tfevents.1678158713.zach-X570-I-AORUS-PRO-WIFI.316083.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train3/labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train3/labels_correlogram.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train3/results.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train3/train_batch0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train3/train_batch1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/train/runs/detect/train3/train_batch2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deep-learning-training/yolov8.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../deep-learning-training/yolov8.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask/flask_backend/routes/user_route.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask/flask_backend/routes/user_route.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask" beforeDir="false" afterPath="$PROJECT_DIR$/flask" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +17,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/flask" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -277,7 +239,9 @@
       <workItem from="1679111418165" duration="35000" />
       <workItem from="1679111453864" duration="4141000" />
       <workItem from="1680384090786" duration="8338000" />
-      <workItem from="1680450412121" duration="475000" />
+      <workItem from="1680450412121" duration="779000" />
+      <workItem from="1680457810544" duration="202000" />
+      <workItem from="1682193464748" duration="94000" />
     </task>
     <servers />
   </component>
