@@ -1,6 +1,7 @@
 from flask import Response
 from app import db
 from generic_requests.GenericRequest import GenericRequest
+from markupsafe import escape
 
 
 def get_all_post(requester, request):
@@ -41,7 +42,18 @@ def put_delete_get_by_id(requester, request, id):
     :return: If get returns the model with the matching id, else returns status code
     """
     if request.method == 'PUT':
-        return requester.put_request(id)
+        try:
+            model_id = escape(id)
+            model = self.model.query.get_or_404(model_id)
+            args = self.parser.parse_args()
+            for key, value in args.items():
+                if args[key] is not None:
+                    setattr(model, key, value)
+            self.db.session.commit()
+            return jsonify(success=True)
+        except ValidationError as err:
+            return {"errors": err.messages}, 422
+
     return delete_get_by_id(requester, request,id)
 
 

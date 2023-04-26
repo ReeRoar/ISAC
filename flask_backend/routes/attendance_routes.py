@@ -41,7 +41,6 @@ def attendance_request_by_id(id):
 
 
 @app.route('/attendance_student/<id>', methods=['GET'])
-@login_required
 def attendance_by_student_id(id):
     """
     Gets objects by student id

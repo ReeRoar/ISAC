@@ -61,6 +61,7 @@ def log_in():
     user_info = UserPasswordSchema().dump(user)
     if len(user_info) != 0 and password == user_info['password']:
         login_user(user)
+        print("-----LOGGED IN-----")
         return {'Message':'Login Successful', 'StatusCode':200}
     return {'Message':'Invalid email or password', 'StatusCode':401}
 
