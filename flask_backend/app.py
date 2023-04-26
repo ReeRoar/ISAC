@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Response
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 from flask_login import (
@@ -21,3 +21,11 @@ app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql://root:password@localhost/flask_t
 app.config['SECRET_KEY'] = 'my_key' #HARDCODED FOR NOW CHANGE TO ENV VARIABLE ON PI
 
 db.init_app(app)
+
+
+@app.before_request
+def handle_preflight():
+    if request.method == "OPTIONS":
+        res = Response()
+        res.headers['X-Content-Type-Options'] = '*'
+        return res
