@@ -1,6 +1,10 @@
 from ultralytics import YOLO
 import cv2
+import requests
 
+IP = '127.0.0.1'
+PORT = '5000'
+base_url = f'http://{IP}:{PORT}/attendance_count/1'
 model = YOLO('best.pt')
 
 
@@ -20,7 +24,7 @@ def two_image_result(image1,image2, crop1=(None,None,None,None), crop2=(None,Non
     results1 = pred_img(cropped_img1)
     cropped_img2 = crop_img(image2,crop2)
     results2 = pred_img(cropped_img2)
-    return results1+results2
+    requests.put(base_url,json={'camera_value':results1+results2})
 
 
 
