@@ -10,7 +10,6 @@ from util.basic_request_functions import get_all_post, put_delete_get_by_id
 requester = GenericRequest(student.Student, student.StudentSchema(), 'student_id', True)
 
 
-@login_required
 @app.route('/students', methods=['GET', 'POST'])
 def student_request():
     """
@@ -22,7 +21,6 @@ def student_request():
     return get_all_post(requester, request)
 
 
-@login_required
 @app.route('/students/<id>', methods=['GET', 'DELETE', 'PUT', ])
 def student_request_by_id(id):
     """

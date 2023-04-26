@@ -12,7 +12,6 @@ requester = GenericRequest(course.Course, course.CourseSchema(), 'course_number'
 
 
 @app.route('/courses', methods=['GET', 'POST'])
-@login_required
 def courses_request():
     """
     Processes student request for get or post
@@ -24,7 +23,6 @@ def courses_request():
 
 
 @app.route('/courses/<id>', methods=['GET', 'DELETE', 'PUT',])
-@login_required
 def courses_request_by_id(id):
     """
     Preforms put, delete, or get request by object id

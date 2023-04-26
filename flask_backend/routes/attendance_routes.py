@@ -18,7 +18,6 @@ requester = ManyToManyRequest(attendance.Attendance,
 
 
 @app.route('/attendance', methods=['GET', 'POST'])
-@login_required
 def attendance_request():
     """
     Processes SignIn request for get or post
@@ -30,7 +29,6 @@ def attendance_request():
 
 
 @app.route('/attendance/<id>', methods=['GET', 'DELETE', 'PUT', ])
-@login_required
 def attendance_request_by_id(id):
     """
     Preforms put, delete, or get request by object id
@@ -50,7 +48,6 @@ def attendance_by_student_id(id):
     return requester.get_all_joined_by_model_id(id)
 
 @app.route('/attendance_course/<id>', methods=['GET'])
-@login_required
 def attendance_by_course_id(id):
     """
     Gets objects by course id
@@ -58,3 +55,4 @@ def attendance_by_course_id(id):
     :return: list of jsons, containing the joined values of objects
     """
     return requester.get_all_joined_by_model2_id(id)
+

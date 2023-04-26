@@ -18,7 +18,6 @@ requester = ManyToManyRequest(professor_assignment.ProfessorAssignment,
 
 
 @app.route('/prof_assignment', methods=['GET', 'POST'])
-@login_required
 def prof_assignment_request():
     """
     Processes SignIn request for get or post
@@ -30,7 +29,6 @@ def prof_assignment_request():
 
 
 @app.route('/prof_assignment/<id>', methods=['GET', 'DELETE', 'PUT', ])
-@login_required
 def prof_assignment_request_by_id(id):
     """
     Preforms put, delete, or get request by object id

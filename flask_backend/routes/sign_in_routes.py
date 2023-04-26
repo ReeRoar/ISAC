@@ -56,7 +56,6 @@ def sign_in_request():
 
 
 @app.route('/sign_ins/<id>', methods=['GET', 'DELETE', 'PUT',])
-@login_required
 def sign_in_request_by_id(id):
     """
     Preforms put, delete, or get request by student id
@@ -67,7 +66,6 @@ def sign_in_request_by_id(id):
 
 
 @app.route('/student_sign_ins/<id>', methods=['GET'])
-@login_required
 def get_all_sign_ins_by_student(id):
     """
     Gets all sign ins by a student
