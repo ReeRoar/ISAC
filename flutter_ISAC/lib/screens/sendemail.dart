@@ -14,6 +14,7 @@ class SendEmailPage extends StatefulWidget {
   State<SendEmailPage> createState() => _SendEmailPageState();
 }
 
+// ignore: non_constant_identifier_names
 SendEmail() {
   final Uri emailLaunchUri = Uri(
       scheme: 'mailto',

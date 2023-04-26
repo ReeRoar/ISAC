@@ -5,7 +5,7 @@ from marshmallow import (
 )
 from sqlalchemy.orm import Mapped
 from sqlalchemy import DateTime
-from app import db, ma
+from app import db, ma, login_manager
 from models import student
 
 
@@ -31,7 +31,7 @@ class SignInSchema(ma.SQLAlchemySchema):
         parser = reqparse.RequestParser()
         parser.add_argument('id', type=int, location='json')
         parser.add_argument('time', type=inputs.datetime_from_iso8601, location='json')
-        parser.add_argument('model_id', type=int, location='json')
+        parser.add_argument('student_id', type=int, location='json')
         return parser
 
 

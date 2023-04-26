@@ -1,3 +1,5 @@
+from flask_login import login_required
+
 from app import app, db
 import models
 from generic_requests.GenericRequest import GenericRequest
@@ -16,6 +18,7 @@ requester = ManyToManyRequest(professor_assignment.ProfessorAssignment,
 
 
 @app.route('/prof_assignment', methods=['GET', 'POST'])
+@login_required
 def prof_assignment_request():
     """
     Processes SignIn request for get or post
@@ -27,6 +30,7 @@ def prof_assignment_request():
 
 
 @app.route('/prof_assignment/<id>', methods=['GET', 'DELETE', 'PUT', ])
+@login_required
 def prof_assignment_request_by_id(id):
     """
     Preforms put, delete, or get request by object id
@@ -37,6 +41,7 @@ def prof_assignment_request_by_id(id):
 
 
 @app.route('/prof_assignment_id/<id>', methods=['GET'])
+@login_required
 def prof_assignment_by_prof_id(id):
     """
     Gets all sign ins by a student

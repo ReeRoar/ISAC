@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_mail_send/screens/sendemail.dart';
-// ignore: implementation_imports
+//ignore: implementation_imports
 //import 'package:flutter/src/widgets/container.dart';
 //import 'package:flutter/src/widgets/framework.dart';
 
