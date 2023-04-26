@@ -28,6 +28,18 @@ def attendance_request():
     return get_all_post(requester, request)
 
 
+@app.route('/attendance_student', methods=['GET'])
+def attendance_student_list_request():
+    """
+    Processes SignIn request for get or post
+    GET will return a list of the information of all SignIn
+    POST requires a JSON object containing the model_id for the student id, and model2_id for the course id
+    :return:
+    """
+
+    return requester.get_all_joined()
+
+
 @app.route('/attendance/<id>', methods=['GET', 'DELETE', 'PUT', ])
 def attendance_request_by_id(id):
     """
