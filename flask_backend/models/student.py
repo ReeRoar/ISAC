@@ -3,12 +3,13 @@ from marshmallow import (
     fields,
     post_load,
 )
+from sqlalchemy import BigInteger
 from sqlalchemy.orm import Mapped
 from app import db, ma
 
 
 class Student(db.Model):
-    student_id: Mapped[int] = db.Column(db.Integer, primary_key=True)
+    student_id: Mapped[BigInteger] = db.Column(db.BigInteger, primary_key=True)
     first_name: Mapped[str] = db.Column(db.String(32), nullable=False)
     last_name: Mapped[str] = db.Column(db.String(32), nullable=False)
     email: Mapped[str] = db.Column(db.String(32))

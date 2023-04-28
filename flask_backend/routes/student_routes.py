@@ -22,7 +22,6 @@ def student_request():
     return get_all_post(requester, request)
 
 
-#@login_required
 @app.route('/students/<id>', methods=['GET', 'DELETE', 'PUT', ])
 def student_request_by_id(id):
     """

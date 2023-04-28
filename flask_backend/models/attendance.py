@@ -20,7 +20,7 @@ class Attendance(db.Model):
     date: Mapped[Date] = db.Column(db.Date)
     status: Mapped[str] = db.Column(db.String(1), server_default='Y')
     course_number = db.Column(db.Integer, db.ForeignKey("course.course_number"), nullable=False)
-    student_id = db.Column(db.Integer, db.ForeignKey("student.student_id"), nullable=False)
+    student_id = db.Column(db.BigInteger, db.ForeignKey("student.student_id"), nullable=False)
 
 
 class AttendanceSchema(ma.SQLAlchemySchema):

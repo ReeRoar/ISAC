@@ -1,0 +1,8 @@
+/checkpoints
+/mmdetection
+/apex
+config/checkpoints
+/JSON2YOLO
+/runs
+*.pt
+/data

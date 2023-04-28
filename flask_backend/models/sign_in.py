@@ -12,7 +12,7 @@ from models import student
 class SignIn(db.Model):
     id: Mapped[int] = db.Column(db.Integer, primary_key=True)
     time: Mapped[DateTime] = db.Column(db.DateTime, server_default=db.func.now())
-    student_id = db.Column(db.Integer, db.ForeignKey("student.student_id"), nullable=False)
+    student_id = db.Column(db.BigInteger, db.ForeignKey("student.student_id"), nullable=False)
 
 
 class SignInSchema(ma.SQLAlchemySchema):

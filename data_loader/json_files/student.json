@@ -1,24 +1,155 @@
 {
   "students": [
     {
+      "student_id": 20410121166,
       "first_name": "Zach",
       "last_name": "Biernat",
       "email": "zachsemail@hartford.edu"
     },
     {
+      "student_id": 104230165137,
       "first_name": "Stew",
       "last_name": "Dent",
       "email": "Dent@hartford.edu"
     },
     {
+      "student_id": 23621330185,
       "first_name": "Alana",
       "last_name": "Cedeno",
       "email": "alanasemail@hartford.edu"
     },
     {
+      "student_id": 60236227166,
       "first_name": "Reema",
       "last_name": "Alotaibi",
       "email": "reemasemail@hartford.edu"
+    },
+    {
+      "student_id": 1222183166,
+      "first_name": "A",
+      "last_name": "A",
+      "email": "AA@hartford.edu"
+    },
+    {
+      "student_id": 92187128166,
+      "first_name": "B",
+      "last_name": "B",
+      "email": "BB@hartford.edu"
+    },
+    {
+      "student_id": 2841150166,
+      "first_name": "C",
+      "last_name": "C",
+      "email": "C@hartford.edu"
+    },
+    {
+      "student_id": 43231162137,
+      "first_name": "D",
+      "last_name": "D",
+      "email": "D@hartford.edu"
+    },
+    {
+      "student_id": 2527817644,
+      "first_name": "E",
+      "last_name": "E",
+      "email": "E@hartford.edu"
+    },
+    {
+      "student_id": 12413014185,
+      "first_name": "F",
+      "last_name": "F",
+      "email": "F@hartford.edu"
+    },
+    {
+      "student_id": 12177167137,
+      "first_name": "G",
+      "last_name": "G",
+      "email": "G@hartford.edu"
+    },
+    {
+      "student_id": 22073132166,
+      "first_name": "H",
+      "last_name": "H",
+      "email": "H@hartford.edu"
+    },
+    {
+      "student_id": 156180210166,
+      "first_name": "I",
+      "last_name": "I",
+      "email": "I@hartford.edu"
+    },
+    {
+      "student_id": 34649030,
+      "first_name": "J",
+      "last_name": "J",
+      "email": "J@hartford.edu"
+    },
+    {
+      "student_id": 1815622730,
+      "first_name": "K",
+      "last_name": "K",
+      "email": "K@hartford.edu"
+    },
+    {
+      "student_id": 182505630,
+      "first_name": "L",
+      "last_name": "L",
+      "email": "L@hartford.edu"
+    },
+    {
+      "student_id": 4419095166,
+      "first_name": "M",
+      "last_name": "M",
+      "email": "BB@hartford.edu"
+    },
+    {
+      "student_id": 76101114166,
+      "first_name": "N",
+      "last_name": "N",
+      "email": "N@hartford.edu"
+    },
+    {
+      "student_id": 28202121162,
+      "first_name": "O",
+      "last_name": "O",
+      "email": "O@hartford.edu"
+    },
+    {
+      "student_id": 2522368185,
+      "first_name": "P",
+      "last_name": "P",
+      "email": "P@hartford.edu"
+    },
+    {
+      "student_id": 6076251166,
+      "first_name": "Q",
+      "last_name": "Q",
+      "email": "Q@hartford.edu"
+    }
+    ,
+    {
+      "student_id": 18899248166,
+      "first_name": "R",
+      "last_name": "R",
+      "email": "R@hartford.edu"
+    },
+    {
+      "student_id": 928032185,
+      "first_name": "S",
+      "last_name": "S",
+      "email": "S@hartford.edu"
+    },
+    {
+      "student_id": 92106190166,
+      "first_name": "T",
+      "last_name": "T",
+      "email": "T@hartford.edu"
+    },
+    {
+      "student_id": 7645213166,
+      "first_name": "U",
+      "last_name": "U",
+      "email": "U@hartford.edu"
     }
   ]
 }
