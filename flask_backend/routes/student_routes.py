@@ -1,6 +1,6 @@
-from flask_login import login_required
+#from flask_login import login_required
 
-from app import app, db, login_manager
+from app import app, db #, login_manager
 import models
 from generic_requests.GenericRequest import GenericRequest
 from flask import request, Response
@@ -11,7 +11,7 @@ requester = GenericRequest(student.Student, student.StudentSchema(), 'student_id
 
 
 @app.route('/students', methods=['GET', 'POST'])
-@login_required
+#@login_required
 def student_request():
     """
     Processes student request for get or post
@@ -22,7 +22,7 @@ def student_request():
     return get_all_post(requester, request)
 
 
-@login_required
+#@login_required
 @app.route('/students/<id>', methods=['GET', 'DELETE', 'PUT', ])
 def student_request_by_id(id):
     """

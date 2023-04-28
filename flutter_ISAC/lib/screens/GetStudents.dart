@@ -7,7 +7,7 @@ import 'package:http/http.dart' as http;
 class GetStudents {
   static Future<List<String>> getStudentNames() async {
     final response =
-        await http.get(Uri.parse('http://127.0.0.1:5000/students'));
+        await http.get(Uri.parse('http://127.0.0.1:5000/attendance_student'));
 
     if (response.statusCode == 200) {
       final studentsJson = json.decode(response.body) as List<dynamic>;

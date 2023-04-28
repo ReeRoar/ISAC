@@ -7,7 +7,7 @@ import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:http/http.dart' as http;
-import 'package:provider/provider.dart';
+import 'screens/home.dart';
 
 void main() {
   runApp(myApp()); //it was myApp :: the code after is added
