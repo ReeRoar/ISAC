@@ -5,6 +5,9 @@ import 'package:flutter_mail_send/screens/sendemail.dart';
 //ignore: implementation_imports
 //import 'package:flutter/src/widgets/container.dart';
 //import 'package:flutter/src/widgets/framework.dart';
+import 'student_List.dart';
+// ignore: unused_import
+import 'GetStudents.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -49,7 +52,7 @@ class _HomePageState extends State<HomePage> {
             style: TextStyle(color: Colors.red),
           ),
         ),
-        body: ListView());
+        body: student_List());
   }
 
   void navigateToSendEmailPage() {
