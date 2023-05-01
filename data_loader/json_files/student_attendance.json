@@ -1,0 +1,502 @@
+[
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-20",
+        "id": 1,
+        "status": "N",
+        "student_id": 20410121166
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "zachsemail@hartford.edu",
+        "first_name": "Zach",
+        "last_name": "Biernat",
+        "student_id": 20410121166
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-20",
+        "id": 2,
+        "status": "N",
+        "student_id": 104230165137
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "Dent@hartford.edu",
+        "first_name": "Stew",
+        "last_name": "Dent",
+        "student_id": 104230165137
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-22",
+        "id": 3,
+        "status": "N",
+        "student_id": 23621330185
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "alanasemail@hartford.edu",
+        "first_name": "Alana",
+        "last_name": "Cedeno",
+        "student_id": 23621330185
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-23",
+        "id": 4,
+        "status": "N",
+        "student_id": 60236227166
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "ralotaibi@hartford.edu",
+        "first_name": "Reema",
+        "last_name": "Alotaibi",
+        "student_id": 60236227166
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-23",
+        "id": 5,
+        "status": "N",
+        "student_id": 1222183166
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "AA@hartford.edu",
+        "first_name": "A",
+        "last_name": "A",
+        "student_id": 1222183166
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-23",
+        "id": 6,
+        "status": "N",
+        "student_id": 92187128166
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "BB@hartford.edu",
+        "first_name": "B",
+        "last_name": "B",
+        "student_id": 92187128166
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-23",
+        "id": 7,
+        "status": "N",
+        "student_id": 2841150166
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "C@hartford.edu",
+        "first_name": "C",
+        "last_name": "C",
+        "student_id": 2841150166
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-23",
+        "id": 8,
+        "status": "N",
+        "student_id": 43231162137
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "D@hartford.edu",
+        "first_name": "D",
+        "last_name": "D",
+        "student_id": 43231162137
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-23",
+        "id": 9,
+        "status": "N",
+        "student_id": 2527817644
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "E@hartford.edu",
+        "first_name": "E",
+        "last_name": "E",
+        "student_id": 2527817644
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-23",
+        "id": 10,
+        "status": "N",
+        "student_id": 12413014185
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "F@hartford.edu",
+        "first_name": "F",
+        "last_name": "F",
+        "student_id": 12413014185
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-23",
+        "id": 11,
+        "status": "N",
+        "student_id": 12177167137
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "G@hartford.edu",
+        "first_name": "G",
+        "last_name": "G",
+        "student_id": 12177167137
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-23",
+        "id": 12,
+        "status": "N",
+        "student_id": 22073132166
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "H@hartford.edu",
+        "first_name": "H",
+        "last_name": "H",
+        "student_id": 22073132166
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-23",
+        "id": 13,
+        "status": "N",
+        "student_id": 156180210166
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "I@hartford.edu",
+        "first_name": "I",
+        "last_name": "I",
+        "student_id": 156180210166
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-23",
+        "id": 14,
+        "status": "N",
+        "student_id": 34649030
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "J@hartford.edu",
+        "first_name": "J",
+        "last_name": "J",
+        "student_id": 34649030
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-23",
+        "id": 15,
+        "status": "N",
+        "student_id": 1815622730
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "K@hartford.edu",
+        "first_name": "K",
+        "last_name": "K",
+        "student_id": 1815622730
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-23",
+        "id": 16,
+        "status": "N",
+        "student_id": 182505630
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "L@hartford.edu",
+        "first_name": "L",
+        "last_name": "L",
+        "student_id": 182505630
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-23",
+        "id": 17,
+        "status": "N",
+        "student_id": 4419095166
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "BB@hartford.edu",
+        "first_name": "M",
+        "last_name": "M",
+        "student_id": 4419095166
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-23",
+        "id": 18,
+        "status": "N",
+        "student_id": 76101114166
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "N@hartford.edu",
+        "first_name": "N",
+        "last_name": "N",
+        "student_id": 76101114166
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-23",
+        "id": 19,
+        "status": "N",
+        "student_id": 28202121162
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "O@hartford.edu",
+        "first_name": "O",
+        "last_name": "O",
+        "student_id": 28202121162
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-23",
+        "id": 20,
+        "status": "N",
+        "student_id": 2522368185
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "P@hartford.edu",
+        "first_name": "P",
+        "last_name": "P",
+        "student_id": 2522368185
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-23",
+        "id": 21,
+        "status": "N",
+        "student_id": 6076251166
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "Q@hartford.edu",
+        "first_name": "Q",
+        "last_name": "Q",
+        "student_id": 6076251166
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-23",
+        "id": 22,
+        "status": "N",
+        "student_id": 18899248166
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "R@hartford.edu",
+        "first_name": "R",
+        "last_name": "R",
+        "student_id": 18899248166
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-23",
+        "id": 24,
+        "status": "N",
+        "student_id": 92106190166
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "T@hartford.edu",
+        "first_name": "T",
+        "last_name": "T",
+        "student_id": 92106190166
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-23",
+        "id": 25,
+        "status": "N",
+        "student_id": 928032185
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "S@hartford.edu",
+        "first_name": "S",
+        "last_name": "S",
+        "student_id": 928032185
+      }
+    },
+    {
+      "Attendance": {
+        "course_number": 1,
+        "date": "2023-10-23",
+        "id": 26,
+        "status": "N",
+        "student_id": 7645213166
+      },
+      "Course": {
+        "course_number": 1,
+        "end_time": "2000-11-21T11:11:30",
+        "start_time": "2000-11-21T12:12:30"
+      },
+      "Student": {
+        "email": "U@hartford.edu",
+        "first_name": "U",
+        "last_name": "U",
+        "student_id": 7645213166
+      }
+    }
+  ]

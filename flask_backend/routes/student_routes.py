@@ -11,7 +11,6 @@ requester = GenericRequest(student.Student, student.StudentSchema(), 'student_id
 
 
 @app.route('/students', methods=['GET', 'POST'])
-#@login_required
 def student_request():
     """
     Processes student request for get or post

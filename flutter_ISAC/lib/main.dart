@@ -3,11 +3,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 import 'package:flutter_mail_send/screens/home.dart';
+import 'package:flutter_mail_send/screens/sendemail.dart';
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:http/http.dart' as http;
-import 'screens/home.dart';
 
 void main() {
   runApp(myApp()); //it was myApp :: the code after is added
@@ -22,6 +22,7 @@ class myApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
       home: HomePage(),
+      //home: SendEmail(),
     );
   }
 }
