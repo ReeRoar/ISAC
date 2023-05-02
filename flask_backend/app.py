@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, Response
+from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 from flask_login import (
@@ -19,6 +20,7 @@ login_manager.session_protection = "strong"
 
 app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql://root:password@localhost/flask_test'
 app.config['SECRET_KEY'] = 'my_key' #HARDCODED FOR NOW CHANGE TO ENV VARIABLE ON PI
+CORS(app)
 
 db.init_app(app)
 
