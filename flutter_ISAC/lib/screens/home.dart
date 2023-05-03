@@ -31,11 +31,23 @@ class _HomePageState extends State<HomePage> {
       final jsonList = jsonDecode(studentResponse.body) as List<dynamic>;
       setState(() {
         data = jsonList.cast<Map<String, dynamic>>().toList();
-        attendanceCount =
-            jsonDecode(countResponse.body) as Map<String, dynamic>;
+        attendanceCount = jsonDecode(countResponse.body) as Map<String, dynamic>;
       });
     } else {
       throw Exception('Failed to load data from API');
+    }
+  }
+
+  Future<void> updateAttendanceCount() async {
+    final response =
+        await http.get(Uri.parse('http://127.0.0.1:5000/attendance_count'));
+
+    if (response.statusCode == 200) {
+      setState(() {
+        attendanceCount = jsonDecode(response.body) as Map<String, dynamic>;
+      });
+    } else {
+      throw Exception('Failed to load attendance count data from API');
     }
   }
 
@@ -66,10 +78,12 @@ class _HomePageState extends State<HomePage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                  'Total Students: ${attendanceCount['student_count'] ?? 'Unknown'}'),
-              Text(
-                  'Camera: ${attendanceCount['camera_value']}, RFID: ${attendanceCount['rfid_value']}, Mismatch Counter: ${attendanceCount['mismatch_counter']}')
+              Text('Total Students: ${attendanceCount['student_count'] ?? 'Unknown'}'),
+              Text('Camera: ${attendanceCount['camera_value']}, RFID: ${attendanceCount['rfid_value']}, Mismatch Counter: ${attendanceCount['mismatch_counter']}'),
+              ElevatedButton(
+                onPressed: updateAttendanceCount,
+                child: const Text('Update'),
+              ),
             ],
           ),
         ),
@@ -77,6 +91,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
 
 /*
 //this class works perfectly
@@ -116,7 +131,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ECE472 Class Attendance'),
+        title: const Text('CSE472 Class Attendance'),
       ),
       body: RefreshIndicator(
         onRefresh: loadData,
